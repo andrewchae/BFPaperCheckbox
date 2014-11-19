@@ -116,7 +116,8 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
 {
     self = [super initWithCoder:decoder];
     if (self) {
-        [self setupWithRadius:bfPaperCheckboxDefaultRadius];
+        CGRect frame = self.frame;
+        [self setupWithRadius:MAX(CGRectGetWidth(frame), CGRectGetHeight(frame)) / 2.f];
     }
     return self;
 }
