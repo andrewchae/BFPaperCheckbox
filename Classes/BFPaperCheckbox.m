@@ -892,7 +892,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         if (self.checkboxSidesCompletedAnimating >= 4) {
             self.checkboxSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
-            NSLog(@"FINISHED drawing BOX");
+            //NSLog(@"FINISHED drawing BOX");
         }
     }
     // Shrink away checkBOX:
@@ -906,7 +906,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         self.checkboxSidesCompletedAnimating++;
         
         if (self.checkboxSidesCompletedAnimating >= 4) {
-            NSLog(@"FINISHED shrinking box");
+            //NSLog(@"FINISHED shrinking box");
             self.checkboxSidesCompletedAnimating = 0;
             [self drawCheckmarkAnimated:YES];
         }
@@ -922,7 +922,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         self.checkboxSidesCompletedAnimating++;
         
         if (self.checkboxSidesCompletedAnimating >= 4) {
-            NSLog(@"FINISHED spinning box CW");
+            //NSLog(@"FINISHED spinning box CW");
             self.checkboxSidesCompletedAnimating = 0;
             [self shrinkAwayCheckboxAnimated:YES];
         }
@@ -938,7 +938,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         self.checkboxSidesCompletedAnimating++;
         
         if (self.checkboxSidesCompletedAnimating >= 4) {
-            NSLog(@"FINISHED spinning box CCW");
+            //NSLog(@"FINISHED spinning box CCW");
             self.checkboxSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
             [self drawCheckBoxAnimated:YES];
@@ -953,7 +953,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         if (self.checkmarkSidesCompletedAnimating >= 2) {
             self.checkmarkSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
-            NSLog(@"FINISHED drawing checkmark");
+            //NSLog(@"FINISHED drawing checkmark");
         }
     }
     // Shrink checkMARK:
@@ -962,7 +962,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
              [[animation valueForKey:@"id"] isEqualToString:mark_eraseLongLine]) {
         self.checkmarkSidesCompletedAnimating++;
         if (self.checkmarkSidesCompletedAnimating >= 2) {
-            NSLog(@"FINISHED shrinking checkmark");
+            //NSLog(@"FINISHED shrinking checkmark");
             self.checkmarkSidesCompletedAnimating = 0;
             [self spinCheckboxAnimated:YES withAngle1:M_PI_4 andAngle2:-5*M_PI_4 andRadiusDenominator:4 forDuration:bfPaperCheckbox_animationDurationConstant / 2.f];
         }
